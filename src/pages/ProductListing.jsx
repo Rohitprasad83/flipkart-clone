@@ -24,6 +24,10 @@ export function ProductListing() {
             sortedProducts.map(product => (
               <Card key={product.id} product={product} />
             ))}
+
+          {sortedProducts && sortedProducts.length < 1 && (
+            <h1>0 Products available for selected filter</h1>
+          )}
         </div>
       </main>
     </div>
